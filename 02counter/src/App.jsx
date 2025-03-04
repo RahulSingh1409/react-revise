@@ -13,11 +13,14 @@ function App() {
     setCounter(counter + 1)
   }
   const Decreasevalue=() => {
-    console.log("clicked" , counter)
-    
-    setCounter(counter - 1)
+    if (counter > 0){
+      setCounter(counter - 1)
+    }
+    else{
+      setValue(counter = 0)
+    }
+   
   }
-  
   return (
     <>
       <h2>Counter value: {counter} </h2>
